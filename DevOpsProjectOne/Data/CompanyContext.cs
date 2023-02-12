@@ -19,5 +19,9 @@ namespace DevOpsProjectOne.Data
         {
             modelBuilder.Entity<User>().ToTable("User");
         }
+        public DbSet<DevOpsProjectOne.Models.Vendor> Vendor { get; set; }
+        public DbSet<DevOpsProjectOne.Models.Part> Part { get; set; }
+        public DbSet<DevOpsProjectOne.Models.Part_Plant> Part_Plant { get; set; }
+        public DbSet<DevOpsProjectOne.Models.Plant> Plant { get; set; }
     }
 }
