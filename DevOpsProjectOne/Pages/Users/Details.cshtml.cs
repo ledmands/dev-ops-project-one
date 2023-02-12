@@ -28,7 +28,7 @@ namespace DevOpsProjectOne.Pages.Users
                 return NotFound();
             }
 
-            var user = await _context.Users.FirstOrDefaultAsync(m => m.ID == id);
+            var user = await _context.Users.FirstOrDefaultAsync(m => m.User_id == id);
             if (user == null)
             {
                 return NotFound();
