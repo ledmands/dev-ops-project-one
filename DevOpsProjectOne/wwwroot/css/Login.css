@@ -1,0 +1,78 @@
+﻿body
+{
+    background-color: #C25544;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    margin-top: 50px;
+    color: whitesmoke;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+form
+{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    padding: 50px;
+    width: 500px;
+    margin: auto;
+}
+
+.logo
+{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .logo img
+    {
+        width: 250px;
+        border-radius: 50%;
+    }
+
+label
+{
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    color: #C25544;
+    -webkit-text-stroke-width: 0.35px;
+    -webkit-text-stroke-color: #C25544;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+button[type="submit"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C25544;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    button[type="submit"]:hover
+    {
+        background-color: white;
+        color: #C25544;
+        outline-color: #C25544;
+    }

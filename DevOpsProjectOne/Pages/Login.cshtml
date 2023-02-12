@@ -1,0 +1,60 @@
+﻿@page
+@model DevOpsProjectOne.Pages.LoginPageModel
+@{
+    ViewData["Title"] = "Login page";
+}
+<html>
+<head>
+    <title>Inventory Management System Login</title>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+<body>
+    <h1>WareWise Inventory Management System Login</h1>
+    <form id="login-form">
+        <div class="logo">
+            <img src="~/images/WareWise-1.png" alt="Logo">
+        </div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    const loginForm = document.getElementById("login-form");
+    loginForm.addEventListener("submit", (event) =>
+    {
+        event.preventDefault();
+        const username = loginForm.elements.username.value;
+        const password = loginForm.elements.password.value;
+        let authenticationLevel;
+        // Here, you can add your authentication logic to determine the authentication level of the user
+        // For example, you can send a request to a server to check the username and password against a database
+        // For now, let's assume the authentication level is hardcoded
+        if (username === "admin" && password === "admin")
+        {
+            authenticationLevel = "admin";
+        } else if (username === "user" && password === "user")
+        {
+            authenticationLevel = "user";
+        } else
+        {
+            alert("Invalid username or password");
+            return;
+        }
+        // Once the authentication level is determined, you can show different pages based on the authentication level
+        if (authenticationLevel === "admin")
+        {
+            // Show the admin page
+            window.location.href = "admin.html";
+        } else if (authenticationLevel === "user")
+        {
+            // Show the user page
+            window.location.href = "user.html";
+        }
+    });
+</script>
+</html>
