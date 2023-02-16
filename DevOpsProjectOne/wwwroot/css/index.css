@@ -1,0 +1,49 @@
+#menu {
+    float: left;
+    background-color: black;
+    width: 10%;
+    height: 100%;
+}
+
+
+#plant-name {
+    background-color: black;
+    color: white;
+}
+
+#welcome-message {
+    background-color: black;
+    color: white;
+}
+
+#inv-section {
+    padding-right: 15%;
+}
+
+
+#plant-name-inv {
+    float: right;
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 10%;
+    font-size: 3em;
+    text-align: center;
+}
+
+#inventory-table {
+    float: right;
+    background-color: black;
+    width: 40%;
+    height: 40%;
+    padding-right: 15%;
+
+}
+
+#inv-table-section {
+    
+    padding-top: 10%;
+    padding-right: 15%;
+    color: white;
+}
+
