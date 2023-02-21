@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DevOpsProjectOne.Models
 {
+    [Table("Plants_Parts")]
     public class Part_Plant
     {
         [Key]
