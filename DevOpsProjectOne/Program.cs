@@ -36,7 +36,7 @@ namespace DevOpsProjectOne
 
                 var context = services.GetRequiredService<CompanyContext>();
                 context.Database.EnsureCreated();
-                // DbInitializer.Initialize(context);
+                DBInitializer.Initialize(context);
             }
 
             app.UseHttpsRedirection();

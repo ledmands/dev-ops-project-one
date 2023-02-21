@@ -21,11 +21,11 @@ namespace DevOpsProjectOne.Data
         public DbSet<Plant> Plant { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Vendor>().ToTable("Vendor");
-            modelBuilder.Entity<Part>().ToTable("Part");
-            modelBuilder.Entity<Part_Plant>().ToTable("Part_Plant");
-            modelBuilder.Entity<Plant>().ToTable("Plant");
+            modelBuilder.Entity<Part>().ToTable("Parts");
+            modelBuilder.Entity<Part_Plant>().ToTable("Plants_Parts");
+            modelBuilder.Entity<Plant>().ToTable("Plants");
         }
 
     }

@@ -14,7 +14,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Vendor[0].Name)
+                @Html.DisplayNameFor(model => model.Vendor[0].Vendor_Name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Vendor[0].Location)
@@ -26,7 +26,7 @@
 @foreach (var item in Model.Vendor) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Vendor_Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Location)

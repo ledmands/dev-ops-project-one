@@ -24,16 +24,16 @@
             @Html.DisplayFor(model => model.User.Last_Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Login)
+            @Html.DisplayNameFor(model => model.User.Login_Name)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Login)
+            @Html.DisplayFor(model => model.User.Login_Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Plant_location)
+            @Html.DisplayNameFor(model => model.User.Plant_Location)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Plant_location)
+            @Html.DisplayFor(model => model.User.Plant_Location)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.User.Token)
@@ -44,6 +44,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.User?.User_id">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.User?.User_ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

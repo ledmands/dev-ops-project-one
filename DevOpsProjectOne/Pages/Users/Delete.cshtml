@@ -25,16 +25,16 @@
             @Html.DisplayFor(model => model.User.Last_Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Login)
+            @Html.DisplayNameFor(model => model.User.Login_Name)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Login)
+            @Html.DisplayFor(model => model.User.Login_Name)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Plant_location)
+            @Html.DisplayNameFor(model => model.User.Plant_Location)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Plant_location)
+            @Html.DisplayFor(model => model.User.Plant_Location)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.User.Token)
@@ -45,7 +45,7 @@
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="User.User_id" />
+        <input type="hidden" asp-for="User.User_ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

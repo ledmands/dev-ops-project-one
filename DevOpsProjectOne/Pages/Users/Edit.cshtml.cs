@@ -30,7 +30,7 @@ namespace DevOpsProjectOne.Pages.Users
                 return NotFound();
             }
 
-            var user =  await _context.Users.FirstOrDefaultAsync(m => m.User_id == id);
+            var user =  await _context.Users.FirstOrDefaultAsync(m => m.User_ID == id);
             if (user == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace DevOpsProjectOne.Pages.Users
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(User.User_id))
+                if (!UserExists(User.User_ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace DevOpsProjectOne.Pages.Users
 
         private bool UserExists(int id)
         {
-          return _context.Users.Any(e => e.User_id == id);
+          return _context.Users.Any(e => e.User_ID == id);
         }
     }
 }
