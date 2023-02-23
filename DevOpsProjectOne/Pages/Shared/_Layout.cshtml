@@ -7,48 +7,62 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DevOpsProjectOne.styles.css" asp-append-version="true" />
+    <title>Inventory Management System Login</title>
+    <link rel="stylesheet" href="~/css/Login.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">DevOpsProjectOne</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - DevOpsProjectOne - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    
+    <h1>WareWise Inventory Management System Login</h1>
+    <form id="login-form">
+        <div class="logo">
+            <img src="~/images/WareWise-1.png" alt="Logo">
         </div>
-    </footer>
-
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    </br>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2023 - DevOpsProjectOne - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+    @RenderBody()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<script>
+    const loginForm = document.getElementById("login-form");
+    loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const username = loginForm.elements.username.value;
+        const password = loginForm.elements.password.value;
+        let authenticationLevel;
+        // Here, you can add your authentication logic to determine the authentication level of the user
+        // For example, you can send a request to a server to check the username and password against a database
+        // For now, let's assume the authentication level is hardcoded
+        if (username === "admin" && password === "admin") {
+            authenticationLevel = "admin";
+        } else if (username === "user" && password === "user") {
+            authenticationLevel = "user";
+        } else {
+            alert("Invalid username or password");
+            return;
+        }
+        // Once the authentication level is determined, you can show different pages based on the authentication level
+        if (authenticationLevel === "admin") {
+            // Show the admin page
+            window.location.href = "admin.html";
+        } else if (authenticationLevel === "user") {
+            // Show the user page
+            window.location.href = "user.html";
+        }
+    });
+</script>
 </html>
