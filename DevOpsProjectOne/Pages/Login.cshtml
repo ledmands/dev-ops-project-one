@@ -1,17 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@page
+@model DevOpsProjectOne.Pages.LoginPageModel
+@{
+    ViewData["Title"] = "Login page";
+}
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DevOpsProjectOne</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/DevOpsProjectOne.styles.css" asp-append-version="true" />
     <title>Inventory Management System Login</title>
     <link rel="stylesheet" href="~/css/Login.css" />
 </head>
 <body>
-    
     <h1>WareWise Inventory Management System Login</h1>
     <form id="login-form">
         <div class="logo">
@@ -25,21 +22,11 @@
         <br>
         <button type="submit">Submit</button>
     </form>
-    </br>
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2023 - DevOpsProjectOne - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            </div>
-        </footer>
-    @RenderBody()
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 <script>
     const loginForm = document.getElementById("login-form");
-    loginForm.addEventListener("submit", (event) => {
+    loginForm.addEventListener("submit", (event) =>
+    {
         event.preventDefault();
         const username = loginForm.elements.username.value;
         const password = loginForm.elements.password.value;
@@ -47,19 +34,24 @@
         // Here, you can add your authentication logic to determine the authentication level of the user
         // For example, you can send a request to a server to check the username and password against a database
         // For now, let's assume the authentication level is hardcoded
-        if (username === "admin" && password === "admin") {
+        if (username === "admin" && password === "admin")
+        {
             authenticationLevel = "admin";
-        } else if (username === "user" && password === "user") {
+        } else if (username === "user" && password === "user")
+        {
             authenticationLevel = "user";
-        } else {
+        } else
+        {
             alert("Invalid username or password");
             return;
         }
         // Once the authentication level is determined, you can show different pages based on the authentication level
-        if (authenticationLevel === "admin") {
+        if (authenticationLevel === "admin")
+        {
             // Show the admin page
             window.location.href = "admin.html";
-        } else if (authenticationLevel === "user") {
+        } else if (authenticationLevel === "user")
+        {
             // Show the user page
             window.location.href = "user.html";
         }

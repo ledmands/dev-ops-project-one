@@ -1,0 +1,49 @@
+﻿@page
+@model DevOpsProjectOne.Pages.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.First_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.First_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Last_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Last_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Login)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Login)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Plant_location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Plant_location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Token)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Token)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.User?.User_id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
