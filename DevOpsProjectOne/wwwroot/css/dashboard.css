@@ -1,0 +1,208 @@
+﻿.navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -200px;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+    color: #333;
+}
+
+/* Style the close button */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #333;
+}
+
+    .closebtn:hover {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        background-color: #333;
+        color: #FFFFFF;
+    }
+
+.nav-item {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 20px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+    .nav-item i {
+        color: #333;
+        padding-right: 10px;
+    }
+
+    .nav-item:hover {
+        background-color: #444;
+        color: #FFFFFF;
+    }
+
+        .nav-item:hover i {
+            background-color: #444;
+            color: #FFFFFF;
+        }
+
+/* Style the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the menu icon */
+.menu-icon {
+    cursor: pointer;
+}
+
+/* Style the header icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+
+.fa-stack[data-count]:after {
+    position: absolute;
+    right: 30px;
+    content: attr(data-count);
+    font-size: 30%;
+    padding: .6em;
+    border-radius: 999px;
+    line-height: .75em;
+    color: #fff;
+    background: rgba(255,0,0,1);
+    text-align: center;
+    min-width: .75em;
+    font-weight: bold;
+}
+
+/* Style the warning icon */
+.warning-icon {
+    margin-right: 20px;
+    color: #FF4500;
+}
+
+    .warning-icon:hover {
+        margin-right: 20px;
+        color: #FF4500;
+        background-color: #444;
+    }
+
+/* Style the message icon */
+.message-icon {
+    margin-right: 20px;
+    color: #F9E79F;
+}
+
+    .message-icon:hover {
+        margin-right: 20px;
+        background-color: #444;
+    }
+
+/* Style the notification icon */
+.notification-icon {
+    margin-right: 20px;
+    color: #FFB700;
+}
+
+    .notification-icon:hover {
+        margin-right: 20px;
+        background-color: #444;
+    }
+
+/* Style the settings icon */
+.settings-icon {
+    margin-right: 20px;
+    color: #808080;
+}
+
+/* Style the plant parts */
+.plant-parts {
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+/* Show the navbar when the menu icon is clicked */
+.show {
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.pagination {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+@media screen and (max-width: 600px) {
+    .pagination a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}

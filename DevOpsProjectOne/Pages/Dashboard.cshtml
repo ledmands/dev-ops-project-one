@@ -1,0 +1,95 @@
+﻿@page
+@model DevOpsProjectOne.Pages.DashboardModel
+@{
+}
+<html>
+<head>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-10mWcsIIfsEHzD9XsOJv91iW7/FwL/96Lz7i4Mn3qV7f/CQNEblww9gSptSvYHMH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Navbar items go here -->
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-layer-group"></i>
+            Dashboard
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-users"></i>
+            Users
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            Inventory
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-warehouse"></i>
+            Warehouses
+        </a>
+    </div>
+    <div class="header">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-icons">
+            <a href="#">
+                <div class="warning-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span class="badge bg-danger">2</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="message-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span class="badge bg-primary">5</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge bg-warning">3</span>
+                </div>
+            </a>
+            <div class="settings-icon">
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+
+    <table id="data-table">
+        <!-- Table headers -->
+        <thead>
+            <tr>
+                <th>Part ID</th>
+                <th>Part Name</th>
+                <th>Part Desc</th>
+            </tr>
+            <tr>
+                <td>018749</td>
+                <td>Power Drill</td>
+                <td>Screws nails</td>
+            </tr>
+            <tr>
+                <td>018749</td>
+                <td>Power Drill</td>
+                <td>Screws nails</td>
+            </tr>
+        </thead>
+        <!-- Table data -->
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-HG8YweWwCJj+oTfJmsv48fPA7WjLd1IaxO9OoTJ8FO7WdJxGW1hQR+hr6jysP+oO" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
